@@ -5,3 +5,5 @@ from .middleware import *
 from .rest import *
 from .static import *
 from .template import *
+from .cache import *
+from .logging import *

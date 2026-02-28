@@ -14,7 +14,7 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
-    'apps.users',
+    'apps.accounts',
 ]
 
 INSTALLED_APPS += THIRD_PARTY_APPS + PROJECT_APPS

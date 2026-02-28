@@ -6,16 +6,9 @@ from django.utils import timezone
 class BaseModel(models.Model):
     """
     Abstract base model with:
-    - UUID primary key
     - Automatic created/updated timestamps
     - Soft delete support
     """
-
-    id = models.UUIDField(
-        primary_key=True,
-        default=uuid.uuid4,
-        editable=False
-    )
 
     created_at = models.DateTimeField(
         auto_now_add=True,
