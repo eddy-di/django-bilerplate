@@ -44,9 +44,8 @@ class Command(BaseCommand):
         def get_or_create_subapp_folder(parent_folder: str, sub_app: str) -> Path:
             target = parent_folder / sub_app
             if target.exists():
-                available = ", ".join(list_folders(parent_folder))
                 raise CommandError(
-                    f"'{sub_app}' not found. Available: {available}")
+                    f"'{sub_app}' already exists.")
             return target
 
         app_path = get_app_path(inside)
